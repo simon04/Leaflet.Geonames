@@ -50,6 +50,7 @@ var control = L.control.geonames({
     featureClasses: ['A', 'H', 'L', 'P', 'R', 'T', 'U', 'V'], // Feature classes to search against.  See: http://www.geonames.org/export/codes.html.
     baseQuery: 'isNameRequired=true', // The core query sent to GeoNames, later combined with other parameters above.
     showMarker: true, // Show a marker at the location the selected location.
+    markerFactory: L.marker, // Function to create a marker
     showPopup: true, // Show a tooltip at the selected location.
     adminCodes: {}, // Filter results by the specified admin codes mentioned in `ADMIN_CODES`. Each code can be a string or a function returning a string. `country` can be a comma-separated list of countries.
     bbox: {}, // An object in form of {east:..., west:..., north:..., south:...}, specifying the bounding box to limit the results to.
